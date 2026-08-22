@@ -55,9 +55,6 @@ function bloomFlowers() {
     
     const isMobile = window.innerWidth < 768;
     const totalItems = isMobile ? 4 : 8;
-    
-    const radiusX = isMobile ? 120 : 270; 
-    const radiusY = isMobile ? 185 : 270; 
 
     const oldElements = document.querySelectorAll('.bloomed-element');
     oldElements.forEach(el => el.remove());
@@ -83,9 +80,23 @@ function bloomFlowers() {
 
         wrapper.appendChild(msgBox);
 
-        const angle = (i * (360 / totalItems)) * (Math.PI / 180);
-        const x = Math.cos(angle) * radiusX;
-        const y = Math.sin(angle) * radiusY;
+        let x, y;
+
+        if (isMobile) {
+            const positions = [
+                { x: 0, y: -160 },
+                { x: 0, y: 160 }, 
+                { x: -115, y: 0 }, 
+                { x: 115, y: 0 } 
+            ];
+            x = positions[i].x;
+            y = positions[i].y;
+        } else {
+            const radius = 270;
+            const angle = (i * (360 / totalItems)) * (Math.PI / 180);
+            x = Math.cos(angle) * radius;
+            y = Math.sin(angle) * radius;
+        }
 
         wrapper.style.transform = `translate(${x}px, ${y}px) scale(0)`;
         
