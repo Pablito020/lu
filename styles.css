@@ -111,7 +111,6 @@ body, html {
     background: rgba(255, 240, 243, 0.95);
 }
 
-/* Botones inferiores fijos adaptados para celular */
 .youtube-btn, #more-texts-button {
     position: fixed;
     bottom: 20px;

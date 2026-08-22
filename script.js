@@ -53,13 +53,11 @@ function generateMoreTexts() {
 function bloomFlowers() {
     const gardenArea = document.getElementById('garden-area');
     
-    // Si es celular, mostramos 6 elementos para que no se amontonen; en compu 8
     const isMobile = window.innerWidth < 768;
-    const totalItems = isMobile ? 6 : 8;
+    const totalItems = isMobile ? 4 : 8;
     
-    // Radios separados para celular (más alejados del centro y estirados verticalmente)
-    const radiusX = isMobile ? 125 : 270; 
-    const radiusY = isMobile ? 175 : 270; 
+    const radiusX = isMobile ? 120 : 270; 
+    const radiusY = isMobile ? 185 : 270; 
 
     const oldElements = document.querySelectorAll('.bloomed-element');
     oldElements.forEach(el => el.remove());
