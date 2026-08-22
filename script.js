@@ -52,10 +52,9 @@ function generateMoreTexts() {
 }
 
 function bloomFlowers() {
-    const gardenArea = document.getElementById('garden-area');
-    
+const gardenArea = document.getElementById('garden-area');    
     const totalItems = 8;
-    const radius = 300; 
+    const radius = window.innerWidth < 768 ? 125 : 270;
 
     const oldElements = document.querySelectorAll('.bloomed-element');
     oldElements.forEach(el => el.remove());
