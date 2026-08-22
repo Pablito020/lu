@@ -46,15 +46,20 @@ function handlePortalClick() {
     bloomFlowers();
 }
 
-// Función que dispara el botón de abajo a la derecha para generar más textos
 function generateMoreTexts() {
     bloomFlowers();
 }
 
 function bloomFlowers() {
-const gardenArea = document.getElementById('garden-area');    
-    const totalItems = 8;
-    const radius = window.innerWidth < 768 ? 125 : 270;
+    const gardenArea = document.getElementById('garden-area');
+    
+    // Si es celular, mostramos 6 elementos para que no se amontonen; en compu 8
+    const isMobile = window.innerWidth < 768;
+    const totalItems = isMobile ? 6 : 8;
+    
+    // Radios separados para celular (más alejados del centro y estirados verticalmente)
+    const radiusX = isMobile ? 125 : 270; 
+    const radiusY = isMobile ? 175 : 270; 
 
     const oldElements = document.querySelectorAll('.bloomed-element');
     oldElements.forEach(el => el.remove());
@@ -81,8 +86,8 @@ const gardenArea = document.getElementById('garden-area');
         wrapper.appendChild(msgBox);
 
         const angle = (i * (360 / totalItems)) * (Math.PI / 180);
-        const x = Math.cos(angle) * radius;
-        const y = Math.sin(angle) * radius;
+        const x = Math.cos(angle) * radiusX;
+        const y = Math.sin(angle) * radiusY;
 
         wrapper.style.transform = `translate(${x}px, ${y}px) scale(0)`;
         
