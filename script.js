@@ -29,7 +29,7 @@ const messages = [
     { 
         text: "Una disculpa por todo, sobre todo por hablar en sexual cuándo realmente te quería conocer de verdad... (tocame para leer más)", 
         type: "apology", 
-        detail: "La verdad no me arrepiento de esto ni de haberte; lo único que me pesa es haberte hecho sentir presionada con expectativas. Lo único que sé es que tu compañía me hace bien y me causa cosas muy lindas." 
+        detail: "La verdad no me arrepiento de esto ni de haberte conocido; lo único que me pesa es haberte hecho sentir presionada con expectativas. Lo único que sé es que tu compañía me hace bien y me causa cosas muy lindas." 
     },
     { text: "Entiendo perfectamente que necesitás tu espacio y lo entiendo", type: "normal" },
     { text: "Tengo ganas de compartir buenos momentos con vos", type: "normal" }
