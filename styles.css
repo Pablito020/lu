@@ -58,22 +58,22 @@ body, html {
 #portal-button {
     position: relative;
     z-index: 10;
-    padding: 12px 24px;
-    font-size: 0.95rem;
+    padding: 8px 16px;
+    font-size: 0.8rem;
     color: #333;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    border-radius: 50px;
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     font-family: 'Georgia', serif;
 }
 
 #portal-button:hover {
     background: rgba(255, 255, 255, 1);
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
 .bloomed-element {
